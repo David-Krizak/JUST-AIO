@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>League of Legends Champions</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">JUST AIO</div>
+      <div class="search-container">
+        <i class="material-icons search-icon">search</i>
+        <input
+          type="text"
+          id="searchInput"
+          class="form-control"
+          placeholder="Search Champion..." />
+      </div>
+      <div class="buttons-container">
+        <button class="telegram-button">Telegram</button>
+        <button class="features-button">Features</button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="champions-list" id="championsList"></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
