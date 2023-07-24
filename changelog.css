@@ -1,0 +1,25 @@
+.container {
+  max-width: 800px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+h1 {
+  color: #6f42c1;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.changelog-list {
+  list-style: square;
+  padding-left: 20px;
+  font-size: 18px;
+}
+
+.changelog-list li {
+  margin-bottom: 10px;
+}

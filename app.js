@@ -69,3 +69,4 @@ fetch(
     });
   })
   .catch((error) => console.error("Error fetching champion data:", error));
+  
