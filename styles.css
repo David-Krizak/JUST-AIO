@@ -77,7 +77,6 @@ body {
 
 .container {
   width: 100%;
-  max-width: 1200px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
@@ -129,7 +128,7 @@ body {
 
 .champion-card:hover {
   transform: translateY(-5px);
-  background-color: #fff;
+  background-color: #fff !important;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
