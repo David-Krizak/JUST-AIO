@@ -1,11 +1,29 @@
 const champions_supported = [
-  "aatrox",
+  "aphelios",
   "ashe",
-  "janna",
-  "jax",
+  "azir",
+  "blitzcrank",
+  "caitlyn",
+  "elise",
+  "ezreal",
   "fizz",
-  "katarina",
-  // Add more champion names here if needed, in lowercase format
+  "graves",
+  "haimerdinger",
+  "irelia",
+  "jhin",
+  "kayn",
+  "lillia",
+  "master yi",
+  "naafiri",
+  "nasus",
+  "nilah",
+  "ryze",
+  "samira",
+  "sivir",
+  "xerath",
+  "yasuo",
+  "yone",
+  "ahri",
 ];
 
 // Function to update background for supported champions
@@ -69,4 +87,3 @@ fetch(
     });
   })
   .catch((error) => console.error("Error fetching champion data:", error));
-  
