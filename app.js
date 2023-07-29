@@ -24,6 +24,8 @@ const champions_supported = [
   "yasuo",
   "yone",
   "ahri",
+  "kayle",
+  "lissandra",
 ];
 
 // Function to update background for supported champions
