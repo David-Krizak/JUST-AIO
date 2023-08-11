@@ -1,4 +1,5 @@
 const champions_supported = [
+  "akali",
   "aatrox",
   "aphelios",
   "ashe",
