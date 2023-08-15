@@ -1,4 +1,8 @@
 const champions_supported = [
+  "alistar",
+  "amumu",
+  "annie",
+  "brand",
   "akali",
   "aatrox",
   "aphelios",
