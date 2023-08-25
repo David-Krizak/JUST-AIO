@@ -1,47 +1,54 @@
+// Updated list of supported champion IDs
 const champions_supported = [
-  "alistar",
-  "amumu",
-  "annie",
-  "brand",
-  "akali",
-  "aatrox",
-  "aphelios",
-  "ashe",
-  "azir",
-  "blitzcrank",
-  "caitlyn",
-  "elise",
-  "ezreal",
-  "fizz",
-  "graves",
-  "haimerdinger",
-  "irelia",
-  "jhin",
-  "kayn",
-  "lillia",
-  "master yi",
-  "naafiri",
-  "nasus",
-  "nilah",
-  "ryze",
-  "samira",
-  "sivir",
-  "xerath",
-  "yasuo",
-  "yone",
-  "ahri",
-  "kayle",
-  "lissandra",
+  "Aatrox",
+  "Ahri",
+  "Alistar",
+  "Amumu",
+  "Anivia",
+  "Annie",
+  "Aphelios",
+  "Ashe",
+  "Akali",
+  "Azir",
+  "Blitzcrank",
+  "Brand",
+  "Caitlyn",
+  "Chogath",
+  "Corki",
+  "Darius",
+  "Diana",
+  "DrMundo",
+  "Draven",
+  "Ezreal",
+  "Fizz",
+  "Graves",
+  "Heimerdinger",
+  "Irelia",
+  "Jhin",
+  "Kayle",
+  "Kayn",
+  "Lillia",
+  "Lissandra",
+  "MasterYi",
+  "Naafiri",
+  "Nasus",
+  "Nilah",
+  "Olaf",
+  "Ryze",
+  "Samira",
+  "Sivir",
+  "Xerath",
+  "Yasuo",
+  "Yone",
 ];
 
 // Function to update background for supported champions
-function updateCardStyle(championName) {
-  const lowercaseChampionName = championName.toLowerCase();
-  const champCard = document.querySelector(`[data-champion="${championName}"]`);
+function updateCardStyle(championId) {
+  const champCard = document.querySelector(`[data-champion="${championId}"]`);
 
   // Check if the champion card exists before modifying its style
   if (champCard) {
-    if (champions_supported.includes(lowercaseChampionName)) {
+    if (champions_supported.includes(championId)) {
       champCard.style.backgroundColor = "rgba(22, 224, 15, 0.69)"; // Light green background color for supported champions
     } else {
       champCard.style.backgroundColor = "#f9f9f9"; // Reset background color for non-supported champions
@@ -59,11 +66,11 @@ fetch(
     const championsList = document.getElementById("championsList");
     const searchInput = document.getElementById("searchInput");
 
-    for (const champion in championsData) {
-      const championInfo = championsData[champion];
+    for (const championId in championsData) {
+      const championInfo = championsData[championId];
       const championCard = document.createElement("div");
       championCard.classList.add("col-md-3", "mb-4", "champion-card");
-      championCard.dataset.champion = champion;
+      championCard.dataset.champion = championId;
 
       const championIcon = document.createElement("img");
       championIcon.src = `https://ddragon.leagueoflegends.com/cdn/13.14.1/img/champion/${championInfo.image.full}`;
@@ -79,7 +86,7 @@ fetch(
       championsList.appendChild(championCard);
 
       // Update card style for each champion
-      updateCardStyle(championInfo.name);
+      updateCardStyle(championId);
     }
 
     // Add event listener for search input
@@ -88,8 +95,8 @@ fetch(
       const championCards = document.querySelectorAll("[data-champion]");
 
       championCards.forEach((card) => {
-        const championName = card.dataset.champion;
-        const shouldDisplay = championName.toLowerCase().includes(searchTerm);
+        const championId = card.dataset.champion;
+        const shouldDisplay = championId.toLowerCase().includes(searchTerm);
         card.style.display = shouldDisplay ? "block" : "none";
       });
     });
